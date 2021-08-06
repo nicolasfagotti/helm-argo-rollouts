@@ -15,7 +15,7 @@ spec:
   ports:
   - name: dashboard
     protocol: TCP
-    port: 3100
+    port: {{ .Values.dashboard.service.port }}
     targetPort: 3100
   selector:
     # app.kubernetes.io/component: {{ .Values.dashboard.component }}
