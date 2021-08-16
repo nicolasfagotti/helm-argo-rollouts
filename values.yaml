@@ -110,12 +110,6 @@ imagePullSecrets: []
 dashboard:
   enabled: false
   component: rollouts-dashboard
-  service:
-    annotations: {}
-    labels: {}
-    portName: dashboard
-    port: 3100
-    targetPort: 3100
   ## Node selectors and tolerations for server scheduling to nodes with taints
   ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
   ##
@@ -137,6 +131,12 @@ dashboard:
     # The name of the service account to use.
     # If not set and create is true, a name is generated using the fullname template
     name: ""
+  service:
+    annotations: {}
+    labels: {}
+    portName: dashboard
+    port: 3100
+    targetPort: 3100
   ## Ingress configuration.
   ## ref: https://kubernetes.io/docs/user-guide/ingress/
   ##
