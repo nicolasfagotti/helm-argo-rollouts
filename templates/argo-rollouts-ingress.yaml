@@ -15,7 +15,7 @@ metadata:
 {{- end }}
   name: {{ template "argo-rollouts.fullname" . }}
   labels:
-    {{- include "argo-rollouts.labels" (dict "context" . "component" .Values.dashboard.name "name" .Values.dashboard.name) | nindent 4 }}
+    {{- include "argo-rollouts.labels" . | nindent 4 }}
     {{- if .Values.dashboard.ingress.labels }}
     {{- toYaml .Values.dashboard.ingress.labels | nindent 4 }}
     {{- end }}
