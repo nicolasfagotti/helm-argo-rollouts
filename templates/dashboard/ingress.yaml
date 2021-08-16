@@ -13,7 +13,7 @@ metadata:
     {{ $key }}: {{ $value | quote }}
   {{- end }}
 {{- end }}
-  name: {{ template "argo-rollouts.fullname" . }}
+  name: {{ template "argo-rollouts.fullname" . }}-dashboard
   labels:
     {{- include "argo-rollouts.labels" . | nindent 4 }}
     {{- if .Values.dashboard.ingress.labels }}
