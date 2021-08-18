@@ -17,6 +17,7 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
+  type: {{ .Values.dashboard.service.type }}
   ports:
   - name: {{ .Values.dashboard.service.portName }}
     protocol: TCP
